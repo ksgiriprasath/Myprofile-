@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>Projects</title>
+   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper ">
+                    <a href="index.html">Profile</a>
+                </div>
+                <div class="nav-link-wrapper ">
+                    <a href="experiance.html">Experience</a>
+                </div>    
+                
+                <div class="nav-link-wrapper ">
+                    <a href="abilities.html">Abilities</a>
+                </div>    
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="projects.html">Projects</a>
+                </div>    
+                <div class="nav-link-wrapper ">
+                    <a href="contactme.html">contact Me</a>
+                </div>    
+            </div>
+            <div class="right-side">
+                <div class="brand">
+                    <div>GIRIPRASATH</div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="main-heading-wrapper">
+            <h1>Projects</h1>
+            <h2 style="font-style: italic;">'Works which shows quality'</h2>
+        </div>   
+
+
+        <div class="content-wrapper">
+            <div class="two-column-wrapper">
+                
+                <div class="portfolio-img-background" style= "background-image: url(images/project1.jpg);"></div>
+                <div class="portfolio-img-background" style= "background-image: url(images/Earthling.jpg);"></div>
+            </div>
+        </div>
+    </div>  
+</body>
+<script>
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+    
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover',() => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+        portfolioItem.addEventListener('mouseout',() => {
+            portfolioItem.childNodes[1].classList.remove('img-darken'); 
+        })        
+    })
+    </script>
+</html>
